@@ -8,7 +8,7 @@ import * as dotenv from 'dotenv';
 // ======================================
 //				Constant
 // ======================================
-const PORT = process.env.NODE_PORT || 4000;
+const PORT = process.env.NODE_PORT || 5000;
 
 async function main(){   
     dotenv.config(); // Para leer las variables de entorno

@@ -1,6 +1,7 @@
 import TasksService from '../../services/tasks.service';
 import { Arg, ID, Query, Resolver } from 'type-graphql';
 import Task from '../../models/tasks.model';
+import { InjectRepository } from 'typeorm-typedi-extensions';
 
 @Resolver()
 export default class TasksQueries {
@@ -8,6 +9,7 @@ export default class TasksQueries {
 	//				Constructor
     // ======================================
     constructor(
+		@InjectRepository(TasksService)
 		private readonly service: TasksService,
     ) {}
     

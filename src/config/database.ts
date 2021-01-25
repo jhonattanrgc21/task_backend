@@ -1,7 +1,9 @@
 import {join} from 'path';
-import {createConnection} from 'typeorm';
+import {Container} from 'typedi';
+import {createConnection, useContainer} from 'typeorm';
 
 export default async function connect(){
+	useContainer(Container);
     await createConnection({
 		type: 'mysql',
 		host: 'localhost',

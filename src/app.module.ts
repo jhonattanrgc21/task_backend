@@ -3,9 +3,10 @@
 // ======================================
 import express from 'express';
 import {ApolloServer} from 'apollo-server-express';
-import {buildSchema} from 'type-graphql';
+import {buildSchema, ResolverData} from 'type-graphql';
 import connect from './config/database';
 import { join } from 'path';
+import {Container} from 'typedi';
 
 // ======================================
 //				Bootstraping
@@ -24,6 +25,8 @@ export default async function App(){
 			join(__dirname, '/app/**/**.resolver.{ts,js}'),
 		],
 		dateScalarMode: 'timestamp',
+		container: ({ context }: ResolverData<any>) =>
+			Container.of(context.requestId),
     });
 	
 	// Inicializando el Apollo Server

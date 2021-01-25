@@ -3,6 +3,7 @@ import { Arg, ID, Resolver, Mutation } from 'type-graphql';
 import TasksService from "../../services/tasks.service";
 import TaskInput from "./inputs.resolver";
 import GeneralResponse from "../../config/general-response";
+import { InjectRepository } from 'typeorm-typedi-extensions';
 
 // ======================================
 //				Tasks Mutations
@@ -13,7 +14,7 @@ export default class TasksMutations {
 	//				Constructor
 	// ======================================
 	constructor(
-		//@InjectRepository(TasksService)
+		@InjectRepository(TasksService)
 		private readonly service: TasksService,
     ) {}
     
