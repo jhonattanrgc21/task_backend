@@ -1,0 +1,48 @@
+{
+  "name": "tasks_backend",
+  "version": "1.0.0",
+  "description": "Backend del proyecto Task, utilizando GraphQL, TypeScript, TypeORM y MySQL.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node src/",
+    "build": "npm run clean && tsc",
+    "clean": "rimraf ./dist",
+    "start": "node dist/index",
+    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js",
+    "seed:config": "ts-node ./node_modules/typeorm-seeding/dist/cli.js config",
+    "seed:run": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed",
+    "schema:drop": "ts-node ./node_modules/typeorm/cli.js schema:drop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhonattanrgc21/task_backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhonattanrgc21/task_backend/issues"
+  },
+  "homepage": "https://github.com/jhonattanrgc21/task_backend#readme",
+  "dependencies": {
+    "apollo-server-express": "^2.19.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "npc": "0.0.1",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
+    "type-graphql": "^1.1.1",
+    "typeorm": "^0.2.30",
+    "typeorm-seeding": "^1.6.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/faker": "^5.1.5",
+    "@types/node": "^14.14.22",
+    "faker": "^5.1.0",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
