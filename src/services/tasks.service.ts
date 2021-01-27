@@ -2,9 +2,7 @@ import ITasks from '../interfaces/tasks.interface';
 import Task from '../database/entities/tasks.entity';
 import { Repository, EntityRepository } from 'typeorm';
 import GeneralResponse from '../config/general-response';
-import { Service } from 'typedi';
 
-@Service()
 @EntityRepository(Task)
 export default class TasksService extends Repository<Task> {
 	// ======================================

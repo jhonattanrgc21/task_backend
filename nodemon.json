@@ -10,6 +10,6 @@
         "src"
     ],
 
-    "ext": "ts",
+    "ext": ".ts, .js",
     "exec": "npm run dev"
 }

@@ -4,7 +4,7 @@
   "description": "Backend del proyecto Task, utilizando GraphQL, TypeScript, TypeORM y MySQL.",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/",
+    "dev": "ts-node src/index.ts",
     "build": "npm run clean && tsc",
     "clean": "rimraf ./dist",
     "start": "node dist/index",
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/jhonattanrgc21/task_backend#readme",
   "dependencies": {
     "apollo-server-express": "^2.19.2",
+    "class-validator": "^0.13.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "graphql": "^15.4.0",
@@ -33,7 +34,7 @@
     "npc": "0.0.1",
     "reflect-metadata": "^0.1.13",
     "type-graphql": "^1.1.1",
-    "typedi": "^0.10.0",
+    "typedi": "^0.8.0",
     "typeorm": "^0.2.30",
     "typeorm-seeding": "^1.6.1",
     "typeorm-typedi-extensions": "^0.4.0"
